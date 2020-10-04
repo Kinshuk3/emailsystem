@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<!--Kanu Priya Lollmun, Narmeen Fatimah Oozeer, Kreetish Venkataswami
+A00430148, A00439194, A00422814
+This document contains the html code of the sentItems window-->
+<html>
+
+    <head>
+        <!--The webpage title-->
+        <title>Your Email System</title>
+
+        <!--linking bootstrap and jquery-->
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <script src="../Scripts/jquery-3.4.1.min.js"></script>
+
+        <!--linking to CSS file where designing is done-->
+        <link rel="stylesheet" href="../css/System.css">
+
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body onload="displayStudentSentItems()">
+	    <!-- linking to the JS file -->
+        <script src="../Scripts/StudentSystem.js"></script>
+
+        <div data-role="page">
+
+            <!--header of sentitems page-->
+            <div class="input-group-text" data-role="header">SENT ITEMS
+            </div>
+
+            <div data-role="content">
+				<!--The content of the sentitems page-->
+                <div data-role="controlgroup" data-type="horizontal">
+                    <a data-role="button" class="margin btn mybtnpoint not-allowed"><span class="header">TO</span></a>
+                    <a data-role="button" class="btn mybtnpoint not-allowed" ><span class="header">SUBJECT</span></a>
+                    <br>
+
+                    <div id="sentItems" onclick="bold()" data-role="controlgroup" data-type="horizontal">
+						Nothing to see here ...
+					</div>
+                </div>
+                <br>
+
+            </div>
+
+
+            <div class="input-group-text" data-role="footer">
+            </div>    
+            <!--Buttons-->
+            <!--button to go to index window-->
+            <a data-role="button" class="btn mybtncolor" onclick="linkToIndex()">Inbox</a>
+            <!--button to go to compose window-->
+            <a data-role="button" class="btn mybtncolor" onclick="linkToCompose()">Compose</a> 
+            <a data-role="button" class="btn mybtncolor" onclick="showHelpStudentSentItems()"><span class="unread">Help</span></a>
+    </body>
+
+</html>

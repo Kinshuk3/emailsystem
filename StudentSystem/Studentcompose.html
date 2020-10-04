@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<!--Kanu Priya Lollmun, Narmeen Fatimah Oozeer, Kreetish Venkataswami
+A00430148, A00439194, A00422814
+This document contains the html code of the compose window-->
+
+<html>
+
+    <head>
+        <!--The webpage title-->
+        <title>Your Email System</title>
+
+        <!--linking bootstrap and jquery-->
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+		<script src="../Scripts/jquery-3.4.1.min.js"></script>
+
+        <!--linking to CSS file where styling is done-->
+        <link rel="stylesheet" href="../css/System.css">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body onload="loadOptions()">
+	    <!-- linking to the js file -->
+        <script src="../Scripts/StudentSystem.js"></script>
+
+        <div data-role="page">
+            <!--header of compose page-->
+            <div class="input-group-text" data-role="header">
+                COMPOSING
+            </div>
+			<!--placeholder for the unsolicited textual message-->
+			<input id ="rOnly"class="form-control" type="text" placeholder="Did you know that you can click on To, Cc, Subject or Body and help will appear?" readonly>
+			<!--The content of the compose page-->
+            <div data-role="content">
+                <div class="input-group-text">
+			
+                    <label for="to" class="helplabel" onclick="openToHelpWindow()">To:</label>
+                    <!--The dropdown menu for to field-->
+					<input class="form-control" list="tolist" type='email' name='to' id='to' />
+                    <datalist id="tolist"></datalist>
+
+                </div>
+
+                <div class="input-group-text">
+
+                    <label for="cc" class="helplabel" onclick="openCcHelpWindow()">Cc:</label>
+                    <!--The dropdown menu for cc field-->
+					<input class="form-control" list="cclist" type='email' name='cc' id='cc' />
+                    <datalist id="cclist"></datalist>
+                </div>
+                <div class="input-group-text">
+				
+                    <label for="subj" class="helplabel" onclick="openSbHelpWindow()">Subject:</label>
+                    <input class="form-control" type='text' name='sb' id='sb' />
+                </div>
+                <div class="input-group-text">
+                    <!--allows the text area box to start a bit more to the right-->
+                    <label for="myTextArea" class="helplabel" onclick="openBodyHelpWindow()">Body</label>
+                    <!--area where user will type the content of the email-->
+                    <textarea class="form-control" name="myTextArea" id="myTextArea"></textarea>
+                </div>
+            </div>
+				<div class="input-group-text" data-role="footer">
+                </div> 
+                <!--Buttons-->
+                <!--button to fire javaScript function which will send information to console-->
+                <a data-role="button" class="btn mybtncolor" onclick="send()"><span class="unread">Send</span></a>
+                <!--button to fire javaScript function which will enable us to go back to index webpage-->
+                <a data-role="button" class="btn mybtncolor" onclick="confirmCancellation()"><span class="unread">Cancel</span></a> 
+				<a data-role="button" class="btn mybtncolor" onclick="showHelpStudentCompose()"><span class="unread">Help</span></a>
+            </div>
+
+    </body>
+
+</html>

@@ -1,0 +1,141 @@
+/*
+*Kanu Priya Lollmun, Narmeen Fatimah Oozeer, Kreetish Venkataswami
+*A00430148, A00439194, A00422814
+*CSS file to set up all the styles for Project1
+*/
+
+/*
+ *Setting the style for the button
+ */
+  .mybtnpoint {
+    width: 400px;
+    text-align: left;
+    background-color:#f8f9fa;
+  }
+  
+/*
+*Making cursor be a pointer when moused over 
+*/
+  .mybtnpoint:hover {
+    cursor: pointer;
+  }
+  
+/*
+*Styling for the buttons. Making them change colour for 0.4s when moused over.
+*/
+  .mybtncolor {
+    width: 150px;
+    text-align: center;
+    font-weight: 500;
+    background-color: lightgray;
+    transition-duration: 0.4s;
+  }
+  
+/*
+*Setting the buttons' background colour'
+*/
+  .mybtncolor:hover {
+    background-color: snow;
+  }
+  
+/*
+*To disable pointer effect  
+*/
+  .not-allowed{
+	  pointer-events:none;
+  }
+  
+/*
+*Setting the style of headers
+*/
+  .header{
+	  font-weight:bold;
+	  text-decoration:underline;
+  }
+   
+ /*
+*Setting the font of unread emails bold
+*/
+.unread{
+	font-weight:bold;
+}	
+
+/*
+*Setting the background colour of the body
+*/
+  body {
+    background-color:#f8f9fa;
+	width: 60%;
+  }
+  
+/*
+*Styling the labels so they look similar to the expected output
+*/
+  label {
+
+    display:inline-block;
+    margin-top: .5rem;
+    width:70px;
+  }
+  
+/*
+*Setting the size of the text areas
+*/
+#myTextArea{
+	width:99.5%;
+	height:500px;
+}
+
+/*
+*Highlighting cross X on mouse hover
+*/
+#cross:hover{
+	background-color: red;
+	cursor: pointer;
+	
+}
+/*
+*Setting the highlight color
+*/
+.highlight:Hover, div.highlight:Hover a.mybtnpoint {
+    background-color: lightgrey;
+    cursor: pointer;
+}
+
+/*
+*Setting the background color for the help boxes
+*/
+.help{
+	background-color: lightblue;
+	
+}
+
+/*
+* The question mark appearance for help
+*/
+.helplabel{
+	cursor: help;	
+}
+
+/*
+* Setting the background color for the unsolicited textual messages in compose pages
+*/
+#rOnly {
+    background-color: #FFFFE0;
+}
+
+/*
+* Styling the input datalist background so that it looks like the expected output
+*/
+input[list].select.decorated option:hover {
+    background-color:blue;
+}
+
+/*
+*Styling the margins so they look similar to the expected output
+*/
+.margin{
+    margin-left:0.4cm;
+}
+
+

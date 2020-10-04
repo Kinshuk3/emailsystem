@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--Kanu Priya Lollmun, Narmeen Fatimah Oozeer, Kreetish Venkataswami
+A00430148, A00439194, A00422814
+This document contains the html code of the viewSentItems window-->
+
+<html>
+
+    <head>
+        <!--The webpage title-->
+        <title>Admin Email System</title>
+
+        <!--linking bootstrap and jquery-->
+        <script src="../Scripts/jquery-3.4.1.min.js"></script>
+		<!-- linking to the JS file -->
+		<script src="../Scripts/AdminSystem.js"></script>
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+        <!--linking to CSS file where designing is done-->
+        <link rel="stylesheet" href="../css/System.css">
+
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body onload="viewSelectedSentItem()">
+        
+
+        <div data-role="page">
+
+            <!--header of viewSentItems page-->
+            <div class="input-group-text" data-role=header>
+                VIEWING SENT ITEM
+            </div>
+
+            <!--The content of the viewSentItems page-->
+            <div data-role="content">
+                <div class="input-group-text">
+                    <label for="to" onclick="openToHelpWindow()">To:</label>
+                    <input class="form-control" type='email' name='to' id='to'/>
+                </div>
+                <div class="input-group-text">
+                    <label for="cc" onclick="openCcHelpWindow()">Cc:</label>
+                    <input class="form-control" type='email' name='cc' id='cc'/>
+                </div>
+                <div class="input-group-text">
+                    <label for="subj" onclick="openSbHelpWindow()">Subject:</label>
+                    <input class="form-control" type='text' name='sb' id='sb'/>
+                </div>
+                <div class="input-group-text">
+                    <!--allows the text area box to start a bit more to the right-->
+                    <label for="myTextArea" onclick="openBodyHelpWindow()">Body</label>
+                    <!--area where user will see the content of the email-->
+                    <textarea class="form-control" name="myTextArea"id="myTextArea"></textarea>
+                </div>
+                 <div class="input-group-text" data-role="footer">
+				</div> 
+                <!--Button to go to sentItems window-->
+                <a data-role="button" class="btn mybtncolor" onclick="linkToSentItems()"><span class="unread">Back</span></a>
+                <a data-role="button" class="btn mybtncolor" onclick="showHelpAdminViewSentItems()"><span class="unread">Help</span></a>
+            </div>
+
+    </body>
+
+</html>
