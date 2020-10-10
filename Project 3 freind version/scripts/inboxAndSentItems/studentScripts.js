@@ -1,7 +1,5 @@
 /*
- * Humaid Muhammad Agowun (A00430163) 
- * Mark Trickett (A00416603) 
- * Diego Gardiner (A00423960)
+ * Kinshuk Chadha (A00431288)
  * 
  * js file that is used by the student inbox, sent items and compose screen
  * which helps linking between the files.

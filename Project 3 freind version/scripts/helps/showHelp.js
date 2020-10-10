@@ -1,7 +1,5 @@
 /*
- * Humaid Muhammad Agowun (A00430163) 
- * Mark Trickett (A00416603) 
- * Diego Gardiner (A00423960)
+ * Kinshuk Chadha (A00431288)
  * 
  * js file that is used by both the compose screens and the 
  * viewing screens to display helps for the labels.

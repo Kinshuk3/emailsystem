@@ -1,7 +1,5 @@
 /*
- * Humaid Muhammad Agowun (A00430163) 
- * Mark Trickett (A00416603) 
- * Diego Gardiner (A00423960)
+ * Kinshuk Chadha (A00431288)
  * 
  * studentCompose.js:
  * js file that is used by the admin to load up the menu options after
