@@ -1,8 +1,11 @@
 /*
+ * Andrew Coakley (A00398990)
  * Kinshuk Chadha (A00431288)
- * 
+ * Alexander Lamey (A00410007)
+ * Priya Lollmun (A00430148)
+ *
  * constants.js:
- * js file that is used by almost all files. They allow code to be 
+ * js file that is used by almost all files. They allow code to be
  * made more readable and changes to constants to be made from only
  * one place.
  */

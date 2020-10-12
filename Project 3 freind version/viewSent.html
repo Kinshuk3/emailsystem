@@ -1,52 +1,127 @@
 <!DOCTYPE html>
 <!-- 
+    Andrew Coakley (A00398990)
     Kinshuk Chadha (A00431288)
+    Alexander Lamey (A00410007)
+    Priya Lollmun (A00430148)
     HTML file used when a student views a sent email item.
 -->
 <html>
-<head>
+  <head>
     <title>Your Email System</title>
-    <link rel="stylesheet" href="./styles/bootstrap.min.css">
-    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
     <script src="./scripts/jquery-3.4.1.min.js" async></script>
     <script src="./scripts/constants.js" async></script>
     <script src="./scripts/viewEmails/backAndHelp.js" async></script>
     <script src="./scripts/viewEmails/fillTextBoxes.js" async></script>
     <script src="./scripts/viewEmails/reply.js" async></script>
     <script src="./scripts/helps/showHelp.js" async></script>
-</head>
-<body onload="fillTextBoxes()"> <!--Fills in the text boxes as per the email clicked-->
-    <span class="myHeader"> <!--Span to change the pointer-->
-        <div data-role="header" class="input-group-text">VIEWING SENT ITEM</div>
+  </head>
+  <body style="background-color: powderblue" onload="fillTextBoxes()">
+    <!--Fills in the text boxes as per the email clicked-->
+    <span class="myHeader">
+      <!--Span to change the pointer-->
+      <div data-role="header" class="input-group-text">VIEWING SENT ITEM</div>
     </span>
 
     <div data-role="content">
-        <div class="input-group-text" data-type="horizontal"> <!--To TextBox-->
-            <label for="partnerTextBox" class="myLabel" onclick="showHelpForTo()">To</label>
-            <input type="email" class="unclickableLongTextBox" id="partnerTextBox">
-        </div>
+      <div class="input-group-text" data-type="horizontal">
+        <!--To TextBox-->
+        <label for="partnerTextBox" class="myLabel" onclick="showHelpForTo()"
+          >To</label
+        >
+        <input
+          type="email"
+          class="unclickableLongTextBox"
+          id="partnerTextBox"
+        />
+      </div>
 
-        <div class="input-group-text" data-type="horizontal"> <!--Cc TextBox-->
-            <label for="ccTextBox" class="myLabel" onclick="showHelpForCc()">Cc</label>
-            <input type="email" class="unclickableLongTextBox" id="ccTextBox">
-        </div>
+      <div class="input-group-text" data-type="horizontal">
+        <!--Cc TextBox-->
+        <label for="ccTextBox" class="myLabel" onclick="showHelpForCc()"
+          >Cc</label
+        >
+        <input type="email" class="unclickableLongTextBox" id="ccTextBox" />
+      </div>
 
-        <div class="input-group-text" data-type="horizontal"> <!--Subject Textbox-->
-            <label for="subjectTextBox" class="myLabel" onclick="showHelpForSubject()">Subject</label>
-            <input type="email" class="unclickableLongTextBox" id="subjectTextBox">
-        </div>
+      <div class="input-group-text" data-type="horizontal">
+        <!--Subject Textbox-->
+        <label
+          for="subjectTextBox"
+          class="myLabel"
+          onclick="showHelpForSubject()"
+          >Subject</label
+        >
+        <input
+          type="email"
+          class="unclickableLongTextBox"
+          id="subjectTextBox"
+        />
+      </div>
 
-        <div class="input-group-text" data-type="horizontal"> <!--Email Body Text Area-->
-            <label for="bodyTextBox" class="myLabel" onclick="showHelpForBody()">Body</label>
-            <textarea class="unclickableEmailTextBox" id="composeTextBox"></textarea>
-        </div>
+      <div class="input-group-text" data-type="horizontal">
+        <!--Email Body Text Area-->
+        <label for="bodyTextBox" class="myLabel" onclick="showHelpForBody()"
+          >Body</label
+        >
+        <textarea
+          class="unclickableEmailTextBox"
+          id="composeTextBox"
+        ></textarea>
+      </div>
     </div>
 
     <div data-role="footer" class="input-group-text"></div>
 
-    <div data-role="controlgroup" data-type="horizontal"> <!--Buttons at the bottom-->
-        <a data-role="button" class="btn normalButton" onclick="linkBackViewSent()">Back</a>
-        <a data-role="button" class="btn normalButton" onclick="helpStudentViewSent()">Help</a>
+    <div data-role="controlgroup" data-type="horizontal">
+      <!--Buttons at the bottom-->
+      <a
+        data-role="button"
+        class="btn normalButton"
+        onclick="linkBackViewSent()"
+        >Back</a
+      >
+      <a
+        data-role="button"
+        class="btn normalButton"
+        onclick="helpStudentViewSent()"
+        >Help</a
+      >
+      <a
+        data-role="button"
+        class="btn normalButton"
+        onclick="changeBackground()"
+        >Theme</a
+      >
     </div>
-</body>
+    <script>
+      // variable used to represent the number of times a user click on the theme button
+      var numberOfClicks = 1;
+
+      /* Andrew Coakley (A00398990)
+       *
+       * This method is used to change the background color upon clicking the theme button.
+       *
+       * no inputs
+       *
+       * Returns: N/A
+       */
+      function changeBackground() {
+        if (numberOfClicks % 5 == 1) {
+          document.body.style.background = "white";
+        } else if (numberOfClicks % 5 == 2) {
+          document.body.style.background = "lightSalmon";
+        } else if (numberOfClicks % 5 == 3) {
+          document.body.style.background = "mediumSeaGreen";
+        } else if (numberOfClicks % 5 == 4) {
+          document.body.style.background = "plum";
+        } else {
+          document.body.style.background = "powderBlue";
+        }
+        numberOfClicks++;
+      }
+    </script>
+  </body>
 </html>

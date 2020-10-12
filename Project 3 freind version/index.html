@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <!-- 
+    Andrew Coakley (A00398990)
     Kinshuk Chadha (A00431288)
+    Alexander Lamey (A00410007)
+    Priya Lollmun (A00430148)
     HTML file for the student's inbox screen, which will be the index.
 -->
 <html>
@@ -17,7 +20,7 @@
     <script src="./scripts/inboxAndSentItems/displayEmailsHelper.js" async></script>
     <script src="./scripts/inboxAndSentItems/settingUpToViewEmail.js" async></script>
 </head>
-<body onload="loadStudentInbox()">
+<body style="background-color:powderblue;" onload="loadStudentInbox();loginScreen()">
     <span class="myHeader"> <!--Span to change the pointer-->
         <div data-role="header" class="input-group-text">INBOX</div>
     </span>
@@ -49,6 +52,54 @@
         <a data-role="button" class="btn normalButton" onclick="linkStudentSent()">Sent Items</a>
         <a data-role="button" class="btn normalButton" onclick="linkStudentCompose(1)">Compose</a>
         <a data-role="button" class="btn normalButton" onclick="helpStudentInbox()">Help</a>
+        <a data-role="button" class="btn normalButton" onclick="changeBackground()">Theme</a>
     </div>
+    <script>
+
+        /*
+         * Andrew Coakley (A00398990)
+         * 
+         * This method is used to create the initial login screen feature.
+         * 
+         * no inputs
+         * 
+         * Returns: N/A
+         */
+        function loginScreen() {
+        
+            if (loggedIn == false) {
+            prompt("What's your name? :)");
+            prompt("Enter your password");
+            }
+        }
+
+        // variable used to represent the number of times a user click on the theme button
+        var numberOfClicks = 1;
+
+        /* Andrew Coakley (A00398990)
+         * 
+         * This method is used to change the background color upon clicking the theme button.
+         * 
+         * no inputs
+         * 
+         * Returns: N/A
+         */
+        function changeBackground() {
+
+            if(numberOfClicks%5 == 1) {
+                document.body.style.background = "white";
+            } else if (numberOfClicks%5 == 2) {
+                document.body.style.background = "lightSalmon";
+            } else if (numberOfClicks%5 == 3) {
+                document.body.style.background = "mediumSeaGreen";
+            } else if (numberOfClicks%5 == 4) {
+                document.body.style.background = "plum";
+            } else {
+                document.body.style.background = "powderBlue";
+            }
+            numberOfClicks++;
+            }
+
+    </script>
 </body>
 </html>

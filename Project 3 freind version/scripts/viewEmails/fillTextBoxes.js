@@ -1,7 +1,10 @@
 /*
+ * Andrew Coakley (A00398990)
  * Kinshuk Chadha (A00431288)
- * 
- * fillTextBoxes.js: 
+ * Alexander Lamey (A00410007)
+ * Priya Lollmun (A00430148)
+ *
+ * fillTextBoxes.js:
  * js file that is used by the viewInbox and viewSent screens.
  * It is used to fill the textboxes based on the required email.
  */
@@ -12,13 +15,11 @@
  * no inputs
  *
  * returns N/A
- */ 
+ */
 function fillTextBoxes() {
-    var name = JSON.parse(localStorage.getItem("emailToView")).collectionName;
-    var index = JSON.parse(localStorage.getItem("emailToView")).index;
-    getEmailJSONFromServer(
-        createViewRequest(name, index)
-    );
+  var name = JSON.parse(localStorage.getItem("emailToView")).collectionName;
+  var index = JSON.parse(localStorage.getItem("emailToView")).index;
+  getEmailJSONFromServer(createViewRequest(name, index));
 }
 
 /*
@@ -29,9 +30,9 @@ function fillTextBoxes() {
  * index = the index of the email in the collection
  *
  * returns N/A
- */ 
+ */
 function createViewRequest(name, index) {
-    return {"collectionName":name, "index":index};
+  return { collectionName: name, index: index };
 }
 
 /*
@@ -41,20 +42,21 @@ function createViewRequest(name, index) {
  * req = the request JSON
  *
  * returns N/A
- */ 
+ */
 function getEmailJSONFromServer(req) {
-    $.post(SERVER_URL + '/viewEmail', req, 
-        useTheEmailToFillTextBoxes).fail(errorFunction);
+  $.post(SERVER_URL + "/viewEmail", req, useTheEmailToFillTextBoxes).fail(
+    errorFunction
+  );
 
-    function useTheEmailToFillTextBoxes(data) {
-        var email = data.email;
-        $("#partnerTextBox").val(email.conversationPartner);
-        $("#ccTextBox").val(email.cc);
-        $("#subjectTextBox").val(email.subject);
-        $("#composeTextBox").val(email.emailText);
-    }
+  function useTheEmailToFillTextBoxes(data) {
+    var email = data.email;
+    $("#partnerTextBox").val(email.conversationPartner);
+    $("#ccTextBox").val(email.cc);
+    $("#subjectTextBox").val(email.subject);
+    $("#composeTextBox").val(email.emailText);
+  }
 
-    function errorFunction (err) {
-        alert("server error in viewing an email.");
-    }
+  function errorFunction(err) {
+    alert("server error in viewing an email.");
+  }
 }
