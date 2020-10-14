@@ -17,8 +17,9 @@
     <script src="./scripts/viewEmails/fillTextBoxes.js" async></script>
     <script src="./scripts/viewEmails/reply.js" async></script>
     <script src="./scripts/helps/showHelp.js" async></script>
+    <script src="./scripts/generalHelperMethods.js" async></script>
   </head>
-  <body style="background-color: powderblue" onload="fillTextBoxes()">
+  <body onload="fillTextBoxes()">
     <!--Fills in the text boxes as per the email clicked-->
     <span class="myHeader">
       <!--Span to change the pointer-->
@@ -123,50 +124,5 @@
         Is it sent to the right person? <br />
       </form>
       <h4 id="readyMessage"></h4></h1>
-    <script>
-      /* Andrew Coakley (A00398990)
-       *
-       * This method is used to change make the text "you're ready to send" appear
-       * once all four checkboxes at the bottom of the screen have been checked.
-       *
-       * no inputs
-       *
-       * Returns: N/A
-       */
-       function isChecked() {
-        var chb = document.getElementsByClassName("chb");
-
-        if (chb[0].checked && chb[1].checked && chb[2].checked) {
-          document.getElementById("readyMessage").innerHTML =
-            "You're ready to send :)";
-        }
-      }
-
-      // variable used to represent the number of times a user click on the theme button
-      var numberOfClicks = 1;
-
-      /* Andrew Coakley (A00398990)
-       *
-       * This method is used to change the background color upon clicking the theme button.
-       *
-       * no inputs
-       *
-       * Returns: N/A
-       */
-      function changeBackground() {
-        if (numberOfClicks % 5 == 1) {
-          document.body.style.background = "white";
-        } else if (numberOfClicks % 5 == 2) {
-          document.body.style.background = "lightSalmon";
-        } else if (numberOfClicks % 5 == 3) {
-          document.body.style.background = "mediumSeaGreen";
-        } else if (numberOfClicks % 5 == 4) {
-          document.body.style.background = "plum";
-        } else {
-          document.body.style.background = "powderBlue";
-        }
-        numberOfClicks++;
-      }
-    </script>
   </body>
 </html>

@@ -17,6 +17,7 @@
     <script src="./scripts/inboxAndSentItems/deleteKey.js" async></script>
     <script src="./scripts/inboxAndSentItems/checkBox.js" async></script>
     <script src="./scripts/inboxAndSentItems/displayEmails.js" async></script>
+    <script src="./scripts/generalHelperMethods.js" async></script>
     <script
       src="./scripts/inboxAndSentItems/displayEmailsHelper.js"
       async
@@ -26,7 +27,7 @@
       async
     ></script>
   </head>
-  <body style="background-color: powderblue" onload="loadStudentSent()">
+  <body onload="loadStudentSent()">
     <span class="myHeader">
       <!--Span to change the pointer-->
       <div data-role="header" class="input-group-text">SENT ITEMS</div>
@@ -79,32 +80,5 @@
         >Theme</a
       >
     </div>
-    <script>
-      // variable used to represent the number of times a user click on the theme button
-      var numberOfClicks = 1;
-
-      /* Andrew Coakley (A00398990)
-       *
-       * This method is used to change the background color upon clicking the theme button.
-       *
-       * no inputs
-       *
-       * Returns: N/A
-       */
-      function changeBackground() {
-        if (numberOfClicks % 5 == 1) {
-          document.body.style.background = "white";
-        } else if (numberOfClicks % 5 == 2) {
-          document.body.style.background = "lightSalmon";
-        } else if (numberOfClicks % 5 == 3) {
-          document.body.style.background = "mediumSeaGreen";
-        } else if (numberOfClicks % 5 == 4) {
-          document.body.style.background = "plum";
-        } else {
-          document.body.style.background = "powderBlue";
-        }
-        numberOfClicks++;
-      }
-    </script>
   </body>
 </html>
