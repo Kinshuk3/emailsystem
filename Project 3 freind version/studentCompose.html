@@ -35,7 +35,7 @@
     </div>
 
     <div data-role="content">
-      <div class="input-group-text" data-type="horizontal">
+      <div id = "label1" class="input-group-text" data-type="horizontal">
         <!--To TextBox-->
         <label for="toDropDown" class="myLabel" onclick="showHelpForTo()"
           >To</label
@@ -76,7 +76,7 @@
         <input type="email" class="longTextBox" id="subjectTextBox" />
       </div>
 
-      <div class="input-group-text" data-type="horizontal">
+      <div id = "label2" class="input-group-text" data-type="horizontal">
         <!--Email Body Text Area-->
         <label for="bodyTextBox" class="myLabel" onclick="showHelpForBody()"
           >Body</label
@@ -110,6 +110,15 @@
       <a data-role="button" class="btn normalButton" onclick="cancel()"
         >Cancel</a
       >
+	        <!--Priya Lollmun-->
+      <a
+        data-role="button"
+        class="btn normalButton"
+        onClick="clearBody()"
+        >Clear</a>
+		<button type="button" class="btn btn-info" 
+		onclick="whatDoTheButtonsDo()">What do the buttons do?</button>
+		
       <form name="helpChecklists">
         <input
           type="checkbox"

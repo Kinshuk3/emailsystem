@@ -90,3 +90,22 @@ function helpAdminCompose() {
 function helpStudentCompose() {
   alert("The purpose of this page is to compose an email and send it.");
 }
+
+/*
+ * @author Priya Lollmun
+ *
+ * Function that clears text body when composing.
+ */
+function clearBody(){
+  $("#composeTextBox").val("");
+}
+/*
+ * @author Priya Lollmun
+ *
+ * Function that pops up with a quick legend as to what each button does.
+ */
+function whatDoTheButtonsDo(){
+alert("The buttons do as following:\nSend: to send an email\n"+
+"Clear: to erase the body\nTheme: "+
+ "to change colours of the background\nCancel: to cancel the email");
+}

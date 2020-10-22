@@ -263,3 +263,26 @@ div.emailRow:hover a.unread {
   height: 15px;
   margin: 0px;
 }
+.myCheckBox {
+    width : 5%;
+    height : 15px;
+    margin:0px;
+}
+
+#label1 {color:white;background-color: lightblue;}
+#label2 {color:white; background-color: lightblue;}
+
+body{
+  width: 60%;
+  background-color: lightYellow;
+}
+
+/*
+ * Makes the hover for To, From, Cc, Subject, Body of the label for the
+ * textboxes of the composing and viewing screens have a help image.
+ *@author Priya Lollmun (A00430148)
+ */
+.myLabel:hover {
+  /*cursor: help;*/
+  cursor: url('help.jpg'), auto;
+}
