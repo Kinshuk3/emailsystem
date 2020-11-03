@@ -54,8 +54,9 @@ function isChecked() {
   }
 }
 
-// a variable to keep track of what the user's name is
+// a variables to keep track of what the user's name and password
 var userName = "";
+var password = "";
 
 // a boolean to keep track of whether of not the user is logged in
 var loggedIn = false;
@@ -72,7 +73,9 @@ var loggedIn = false;
 function loginScreen() {
   if (loggedIn == false) {
     userName = prompt("What's your name? :)");
-    prompt("Enter your password");
+    while (userName != password) {
+      password = prompt("Enter your password (same as username)");
+    }
   }
   loggedIn = true;
 }
