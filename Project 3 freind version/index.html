@@ -3,48 +3,47 @@
     Kinshuk Chadha (A00431288)
     HTML file for the student's inbox screen, which will be the index.
 -->
-<html>
-  <head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Email System</title>
-    <link rel="stylesheet" href="./styles/bootstrap.min.css" />
-    <link rel="stylesheet" href="./scripts/helps/help.css" />
-    <script src="./scripts/jquery-3.4.1.min.js" async></script>
-    <script src="./scripts/constants.js" async></script>
-    <script src="./scripts/inboxAndSentItems/studentScripts.js" async></script>
-    <script src="./scripts/inboxAndSentItems/deleteKey.js" async></script>
-    <script src="./scripts/inboxAndSentItems/checkBox.js" async></script>
-    <script src="./scripts/inboxAndSentItems/displayEmails.js" async></script>
-    <script
-      src="./scripts/inboxAndSentItems/displayEmailsHelper.js"
-      async
-    ></script>
-    <script
-      src="./scripts/inboxAndSentItems/settingUpToViewEmail.js"
-      async
-    ></script>
-  </head>
-  <body>
-    <h1>Welcome To The Email System!</h1>
-    <br /><br /><br /><br />
-
-    <div>
-      <p>Click this button for ADMIN INBOX Page:</p>
-      <input
-        type="button"
-        onClick="location.href='adminInbox.html'"
-        value="ADMIN"
-      />
-      <br /><br />
-    </div>
-    <br /><br />
-    <div>
-      <p>Click this button for STUDENT INBOX Page:</p>
-      <input
-        type="button"
-        onClick="location.href='studentInbox.html'"
-        value="STUDENT"
-      />
-      <br /><br />
-    </div>
-  </body>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    
+    
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h3>The Email System</h3>
+        </div>
+        <ul class="nav-links">
+            
+            <li>
+                <a href="adminInbox.html">Admin</a>
+            </li>
+			
+            <li>
+                <a href="studentInbox.html">Student</a>
+            </li>
+			
+			<li>
+                <a href="#">About</a>
+            </li>
+			
+            <li>
+                <a href="#">Logout</a>
+            </li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+    
+    <script src="app.js"></script>
+</body>
 </html>
