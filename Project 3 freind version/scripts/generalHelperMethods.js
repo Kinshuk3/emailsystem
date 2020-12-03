@@ -1,8 +1,5 @@
 /*
  * Andrew Coakley (A00398990)
- * Kinshuk Chadha (A00431288)
- * Alexander Lamey (A00410007)
- * Priya Lollmun (A00430148)
  *
  * generalHelperMethods.js:
  * js file that is used by the student screens to add miscellaneous features. Contains functionss for the

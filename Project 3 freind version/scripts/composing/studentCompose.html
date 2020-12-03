@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--
+<!-- 
     Andrew Coakley (A00398990)
     Kinshuk Chadha (A00431288)
     Alexander Lamey (A00410007)
@@ -20,6 +20,7 @@
     <script src="./scripts/composing/studentCompose.js"></script>
     <script src="./scripts/helps/showHelp.js"></script>
     <script src="./scripts/generalHelperMethods.js" async></script>
+	
   </head>
   <body onload="prepareStudentCompose()">
     <!--Loads the drop down menu options-->
@@ -64,6 +65,7 @@
         <datalist id="ccNames" class="list"></datalist>
         <!--Data list for the Cc textBox-->
       </div>
+
 
       <div class="input-group-text" data-type="horizontal">
         <!--Subject Textbox-->
@@ -110,18 +112,21 @@
       <a data-role="button" class="btn normalButton" onclick="cancel()"
         >Cancel</a
       >
+	  <input type=button onClick="location.href='adminCompose.html'" value='ADVANCED'>
+	  <br><br>
+	        <!--Priya Lollmun-->
       <a
         data-role="button"
         class="btn normalButton"
         onClick="clearBody()"
         >Clear</a>
-		<button type="button" class="btn btn-info"
+		<button type="button" class="btn btn-info" 
 		onclick="whatDoTheButtonsDo()">What do the buttons do?</button>
-
+		
       <form name="helpChecklists">
         <input
           type="checkbox"
-          class="chb"
+          class="checkbox"
           name="greeting"
           onClick="isChecked();"
         />
