@@ -1,0 +1,47 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email System</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <h3>The Email System</h3>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="assets/adminInbox.html">Admin</a>
+        </li>
+
+        <li>
+          <a href="assets/studentInbox.html">Student</a>
+        </li>
+
+        <li>
+          <a href="#">About</a>
+        </li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+    <br>
+    <br>
+    
+    <h1>Hello <%= name %></h1>
+    <form action="/logout?_method=DELETE" method="POST">
+    <button type="submit">Log Out</button>
+    </form>
+
+    <script src="assets/app.js"></script>
+  </body>
+</html>
