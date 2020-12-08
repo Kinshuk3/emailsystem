@@ -2,7 +2,7 @@
  * Andrew Coakley (A00398990)
  *
  * generalHelperMethods.js:
- * js file that is used by the student screens to add miscellaneous features. Contains functionss for the
+ * js file that is used by the student screens to add miscellaneous features. Contains functions for the
  * theme button, the checkboxes at the bottom of the student compose screens, and for the initial login screen.
  *
  */
@@ -45,7 +45,13 @@ function changeBackground() {
 function isChecked() {
   var chb = document.getElementsByClassName("chb");
 
-  if (chb[0].checked && chb[1].checked && chb[2].checked) {
+  if (
+    chb[0].checked &&
+    chb[1].checked &&
+    chb[2].checked &&
+    chb[3].checked &&
+    chb[4].checked
+  ) {
     document.getElementById("readyMessage").innerHTML =
       "You're ready to send :)";
   }
@@ -55,7 +61,7 @@ function isChecked() {
 var userName = "";
 var password = "";
 
-// a boolean to keep track of whether of not the user is logged in
+// a boolean to keep track of whether or not the user is logged in
 var loggedIn = false;
 
 /*

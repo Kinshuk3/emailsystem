@@ -1,11 +1,8 @@
 /*
- * Andrew Coakley (A00398990)
- * Kinshuk Chadha (A00431288)
- * Alexander Lamey (A00410007)
- * Priya Lollmun (A00430148)
+ * Responsible for these inherited files: Andrew Coakley (A00398990)
  *
  * CheckBox.js:
- * js file that is used by the inbox and sent items screens.
+ * This is a javascript file that is used by the inbox and sent items screens.
  * It describes what happens when the check box is clicked
  */
 

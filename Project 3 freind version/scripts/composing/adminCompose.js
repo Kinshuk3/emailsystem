@@ -1,8 +1,5 @@
 /*
- * Andrew Coakley (A00398990)
- * Kinshuk Chadha (A00431288)
- * Alexander Lamey (A00410007)
- * Priya Lollmun (A00430148)
+ * Responsible for these inherited files: Priya Lollmun (A00430148)
  *
  * adminCompose.js:
  * js file that is used by the admin to load up the menu options after

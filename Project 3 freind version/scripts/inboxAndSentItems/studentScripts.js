@@ -1,8 +1,5 @@
 /*
- * Andrew Coakley (A00398990)
- * Kinshuk Chadha (A00431288)
- * Alexander Lamey (A00410007)
- * Priya Lollmun (A00430148)
+ * Responsible for these inherited files: Andrew Coakley (A00398990)
  *
  * js file that is used by the student inbox, sent items and compose screen
  * which helps linking between the files.
