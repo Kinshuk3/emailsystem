@@ -1,0 +1,65 @@
+/*
+ * Andrew Coakley (A00398990)
+ * Kinshuk Chadha (A00431288)
+ * Alexander Lamey (A00410007)
+ * Priya Lollmun (A00430148)
+ *
+ * Revised for efficiency by Priya Lollmun
+ *  
+ * fillTextBoxes.js:
+ * js file that is used by the viewInbox and viewSent screens.
+ * It is used to fill the textboxes based on the required email.
+ */
+
+/*
+ * Fills the Text Boxes of the screen based on the email to view.
+ *
+ * no inputs
+ *
+ * returns N/A
+ */
+function fillTextBoxes() {
+  var name = JSON.parse(localStorage.getItem("emailToView")).collectionName;
+  var index = JSON.parse(localStorage.getItem("emailToView")).index;
+  getEmailJSONFromServer(createViewRequest(name, index));
+}
+
+/*
+ * Creates the JSON that is sent to the server as the request to view an
+ * email that is for the post for '/viewEmail'
+ *
+ * name = the collection name
+ * index = the index of the email in the collection
+ *
+ * returns N/A
+ */
+function createViewRequest(name, index) {
+  return { collectionName: name, index: index };
+}
+
+/*
+ * Function that gets an email from the server.
+ * It will then set up the text boxes as per required.
+ *
+ * req is the request JSON
+ *
+ */
+function getEmailJSONFromServer(req) {
+  $.post(SERVER_URL + "/viewEmail", req, useTheEmailToFillTextBoxes).fail(
+    alert("server error in viewing an email.")
+  );
+
+  /*
+  * Function that fills up the text boxes as per required.
+  * 
+  * data is the email data received
+  *
+  */
+  function useTheEmailToFillTextBoxes(data) {
+    var email = data.email;
+    $("#partnerTextBox").val(email.conversationPartner);
+    $("#ccTextBox").val(email.cc);
+    $("#subjectTextBox").val(email.subject);
+    $("#composeTextBox").val(email.emailText);
+  }
+}

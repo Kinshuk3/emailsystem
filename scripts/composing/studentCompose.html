@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!-- 
+    Andrew Coakley (A00398990)
+    Kinshuk Chadha (A00431288)
+    Alexander Lamey (A00410007)
+    Priya Lollmun (A00430148)
+    HTML file for the student's compose screen.
+-->
+<html>
+  <head>
+    <title>Your Email System</title>
+    <link rel="stylesheet" href="./styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <script src="./scripts/jquery-3.4.1.min.js"></script>
+    <script src="./scripts/constants.js"></script>
+    <script src="./scripts/composing/composingHelperMethods.js"></script>
+    <script src="./scripts/composing/linkBackCompose.js"></script>
+    <script src="./scripts/composing/sendingEmailHelper.js"></script>
+    <script src="./scripts/composing/sendStudentEmail.js"></script>
+    <script src="./scripts/composing/studentCompose.js"></script>
+    <script src="./scripts/helps/showHelp.js"></script>
+    <script src="./scripts/generalHelperMethods.js" async></script>
+  </head>
+  <body onload="prepareStudentCompose()">
+    <!--Loads the drop down menu options-->
+    <span class="myHeader">
+      <!--Span to change the pointer-->
+      <div data-role="header" class="input-group-text">COMPOSING</div>
+    </span>
+
+    <div class="unsolicitedText">
+      <!--Adds the yellow text-->
+      Did you know that you can click on To, Cc, Subject or Body and help will
+      appear?
+    </div>
+
+    <div data-role="content">
+      <div id = "label1" class="input-group-text" data-type="horizontal">
+        <!--To TextBox-->
+        <label for="toDropDown" class="myLabel" onclick="showHelpForTo()"
+          >To</label
+        >
+        <input
+          type="text"
+          class="longTextBox"
+          list="adminNames"
+          id="toDropDown"
+        />
+        <datalist id="adminNames" class="list"></datalist>
+        <!--Data list for the To textBox-->
+      </div>
+
+      <div class="input-group-text" data-type="horizontal">
+        <!--Cc TextBox-->
+        <label for="ccDropDown" class="myLabel" onclick="showHelpForCc()"
+          >Cc</label
+        >
+        <input
+          type="email"
+          class="longTextBox"
+          list="ccNames"
+          id="ccDropDown"
+        />
+        <datalist id="ccNames" class="list"></datalist>
+        <!--Data list for the Cc textBox-->
+      </div>
+
+      <div class="input-group-text" data-type="horizontal">
+        <!--Subject Textbox-->
+        <label
+          for="subjectTextBox"
+          class="myLabel"
+          onclick="showHelpForSubject()"
+          >Subject</label
+        >
+        <input type="email" class="longTextBox" id="subjectTextBox" />
+      </div>
+
+      <div id = "label2" class="input-group-text" data-type="horizontal">
+        <!--Email Body Text Area-->
+        <label for="bodyTextBox" class="myLabel" onclick="showHelpForBody()"
+          >Body</label
+        >
+        <textarea class="emailTextBox" id="composeTextBox"></textarea>
+      </div>
+    </div>
+
+    <div data-role="footer" class="input-group-text"></div>
+
+    <div data-role="controlgroup" data-type="horizontal">
+      <!--Buttons at the bottom-->
+      <a
+        data-role="button"
+        class="btn normalButton"
+        onclick="sendStudentEmail()"
+        >Send</a
+      >
+      <a
+        data-role="button"
+        class="btn normalButton"
+        onclick="helpStudentCompose()"
+        >Help</a
+      >
+      <!--Andrew Coakley-->
+      <a
+        data-role="button"
+        class="btn normalButton"
+        onclick="changeBackground()"
+        >Theme</a
+      >
+      <a data-role="button" class="btn normalButton" onclick="cancel()"
+        >Cancel</a
+      >
+	    <!--Priya Lollmun-->
+      <a
+        data-role="button"
+        class="btn normalButton"
+        onClick="clearBody()"
+        >Clear</a>
+		<button type="button" class="btn btn-info" 
+		onclick="whatDoTheButtonsDo()">What do the buttons do?</button>
+    
+      <!--Andrew Coakley-->
+      <form name="helpChecklists">
+        <input
+          type="checkbox"
+          class="chb"
+          name="greeting"
+          onClick="isChecked();"
+        />
+        <!--Priya Lollmun-->
+        Did you check if the grammar and punctuation is correct? <br />
+        <input
+          type="checkbox"
+          class="chb"
+          name="subject"
+          onClick="isChecked();"
+        />
+        <!--Andrew Coakley-->
+        Did you write a greeting? <br />
+        <input
+          type="checkbox"
+          class="chb"
+          name="sendOff"
+          onClick="isChecked();"
+        />
+        Did you sign your name? <br />
+        <input
+          type="checkbox"
+          class="chb"
+          name="subject"
+          onClick="isChecked();"
+        />
+        Did you write a subject? <br />
+        <input type="checkbox" class="chb" name="to" onClick="isChecked();" />
+        Is it sent to the right person? <br />
+      </form>
+      <h4 id="readyMessage"></h4></h1>
+    </div>
+  </body>
+</html>
